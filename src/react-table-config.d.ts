@@ -53,9 +53,9 @@ declare module "react-table" {
 
   export interface TableOptions<D extends object>
     extends UseExpandedOptions<D>,
-      // UseFiltersOptions<D>,
-      // UseGlobalFiltersOptions<D>,
-      // UseGroupByOptions<D>,
+      UseFiltersOptions<D>,
+      UseGlobalFiltersOptions<D>,
+      UseGroupByOptions<D>,
       // UsePaginationOptions<D>,
       // UseResizeColumnsOptions<D>,
       // UseRowSelectOptions<D>,

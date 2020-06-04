@@ -1,7 +1,7 @@
-export type Joined = ContractOverview &
-  Partial<Contract> &
-  Partial<Order> &
-  Partial<Product>;
+// export type Joined = ContractOverview &
+//   Partial<Contract> &
+//   Partial<Order> &
+//   Partial<Product>;
 export interface ContractOverview {
   customerName: string;
   customerRpi: string;
