@@ -13,18 +13,34 @@ table {
   font-family: Iosevka, monospace;
 }
 
+td[class*="Decimal"] {
+  text-align: right;
+}
+
 td,
 th {
   padding: 0.5rem;
   text-align: left;
+  padding-left: 1rem;
+  border-left: 1px solid white;
 }
 
-table tr:nth-child(2n) {
+.boundary:last-of-type {
+  border-right: 1px solid black;
+}
+
+table tr:nth-child(2n + 1) {
   background-color: #dddddd;
 }
 
+/* table th:nth-child(2n) { */
+/*   background-color: grey; */
+/* } */
+
 .fade {
   opacity: 0.5;
+}
+th {
 }
 
 tr > th[colspan="1"] {

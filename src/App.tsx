@@ -14,7 +14,8 @@ import {
   ColumnInstance,
   Cell,
   useRowSelect,
-  useColumnOrder
+  useColumnOrder,
+  useSortBy
 } from "react-table";
 
 const rawPayload: ContractOverview[] = payload as any;
@@ -164,7 +165,9 @@ const overviewColDefs: Column<RowType>[] = [
 
 const renderGrouper = (col: ColumnInstance<RowType>) => {
   if (col.canGroupBy) {
-    return col.isGrouped ? "-" : "+";
+    return (
+      <span {...col.getGroupByToggleProps()}>{col.isGrouped ? "-" : "+"}</span>
+    );
   }
   return null;
 };
@@ -183,8 +186,9 @@ const renderAggCell = (cell: Cell<RowType>, row: Row<RowType>) => {
 };
 
 const renderCell = (cell: Cell<RowType>, row: Row<RowType>) => {
+  const foo = cell.column.isGrouped ? "boundary" : "";
   return (
-    <td {...cell.getCellProps()}>
+    <td className={`cell-${cell.column.id} ${foo}`} {...cell.getCellProps()}>
       {cell.isGrouped
         ? renderGroupedCell(cell, row)
         : cell.isAggregated
@@ -194,6 +198,16 @@ const renderCell = (cell: Cell<RowType>, row: Row<RowType>) => {
         : cell.render("Cell")}
     </td>
   );
+};
+
+const renderSorter = (col: ColumnInstance<RowType>) => {
+  if (!col.canSort) return null;
+  let char;
+  if (col.isSortedDesc === undefined) {
+    char = "-";
+  }
+  char = char ?? (col.isSortedDesc ? "↑" : "↓");
+  return <span {...col.getSortByToggleProps()}>{char}</span>;
 };
 
 const OverviewTable = () => {
@@ -223,6 +237,7 @@ const OverviewTable = () => {
     useFilters,
     useGlobalFilter,
     useGroupBy,
+    useSortBy,
     useExpanded,
     useColumnOrder,
     useRowSelect
@@ -235,6 +250,26 @@ const OverviewTable = () => {
     }
   }, [state.groupBy]);
 
+  // const handleDragEnter = (event: Han)
+  const handleDragOver = (data: DataTransfer) => {
+    console.log(data.getData("text/plain"));
+  };
+
+  const handleDragEnter = (data: DataTransfer) => {
+    console.log(data.getData("text/plain"));
+  };
+
+  const handleDragStart = (data: DataTransfer, id: string) => {
+    console.log(id);
+    data.setData("text/plain", id);
+    data.dropEffect = "move";
+  };
+
+  const handleDrop = (data: DataTransfer) => {
+    console.log("dropping");
+    console.log(data.getData("text/plain"));
+  };
+
   return (
     <>
       <table {...getTableProps()}>
@@ -242,10 +277,22 @@ const OverviewTable = () => {
           {headerGroups.map(hg => (
             <tr {...hg.getHeaderGroupProps()}>
               {hg.headers.map(col => (
-                <th {...col.getHeaderProps()} {...col.getGroupByToggleProps()}>
-                  <div>
-                    {renderGrouper(col)} {col.render("Header")}
-                  </div>
+                <th
+                  draggable
+                  onDragEnter={ev => handleDragEnter(ev.dataTransfer)}
+                  onDragStart={ev => handleDragStart(ev.dataTransfer, col.id)}
+                  onDragOver={ev => {
+                    ev.preventDefault();
+                    return handleDragOver(ev.dataTransfer);
+                  }}
+                  onDrop={ev => {
+                    ev.preventDefault();
+                    return handleDrop(ev.dataTransfer);
+                  }}
+                  {...col.getHeaderProps()}
+                >
+                  {renderGrouper(col)} {col.render("Header")}{" "}
+                  {renderSorter(col)}
                 </th>
               ))}
             </tr>
