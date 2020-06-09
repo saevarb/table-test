@@ -1,0 +1,634 @@
+[
+  {
+    "customerName": "Sera Scandia A/S",
+    "customerRpi": "2781",
+    "companyCodeName": "itelligence DK",
+    "companyCodeNumber": "1200",
+    "contracts": [
+      {
+        "contractRpi": 40002165,
+        "salesResponsible": "Helle Bo Nielsen",
+        "contractTypeCode": "License",
+        "totalRevenue": "328.396,00 ",
+        "totalCost": "34.200,00 ",
+        "nextBillingDate": null,
+        "invoicingCycle": "One time",
+        "productType": "SAP",
+        "contractStatus": "Active",
+        "orders": [
+          {
+            "orderStartDate": "2018-04-01",
+            "orderEndDate": "9999-12-31",
+            "contractDuration": null,
+            "customerNoticePeriod": 3,
+            "customerPo": null,
+            "quantity": 1,
+            "customerSignatureDate": "2018-03-21",
+            "quoteNumber": null,
+            "quoteConfirmation": null,
+            "vendorSalesOrderNumber": null,
+            "vendorNoticePeriod": null,
+            "nextBillingDate": null,
+            "customerSupportLevelCode": null,
+            "vendorSupportLevelCode": null,
+            "wbsNumber": "PS-00509.02",
+            "orderRevenueAmount": "25.926,00 ",
+            "orderCostAmount": "2.700,00 ",
+            "costRevenueDetails": [
+              {
+                "type": "Revenue",
+                "percentage": 22,
+                "licenseAmount": "25.926,00 ",
+                "maintenanceBaseAmount": "",
+                "fee": "",
+                "totalContractAmount": "",
+                "currencyCode": "DKK",
+                "invoicingDate": null,
+                "licenseAmountBigDecimal": 25926,
+                "maintenanceBaseAmountBigDecimal": null,
+                "invoicingCyclePeriodName": "One time",
+                "totalContractAmountBigDecimal": null,
+                "feeBigDecimal": null
+              },
+              {
+                "type": "Cost",
+                "percentage": 22,
+                "licenseAmount": "2.700,00 ",
+                "maintenanceBaseAmount": "",
+                "fee": "",
+                "totalContractAmount": "",
+                "currencyCode": "EUR",
+                "invoicingDate": null,
+                "licenseAmountBigDecimal": 2700,
+                "maintenanceBaseAmountBigDecimal": null,
+                "invoicingCyclePeriodName": "One time",
+                "totalContractAmountBigDecimal": null,
+                "feeBigDecimal": null
+              }
+            ],
+            "statuses": [
+              {
+                "type": "Running",
+                "name": "Order Status",
+                "description": null
+              }
+            ],
+            "regulations": [],
+            "orderRevenueAmountBigDecimal": 25926,
+            "orderCostAmountBigDecimal": 2700
+          },
+          {
+            "orderStartDate": "2018-04-01",
+            "orderEndDate": "9999-12-31",
+            "contractDuration": null,
+            "customerNoticePeriod": 3,
+            "customerPo": null,
+            "quantity": 20,
+            "customerSignatureDate": "2018-03-21",
+            "quoteNumber": null,
+            "quoteConfirmation": null,
+            "vendorSalesOrderNumber": null,
+            "vendorNoticePeriod": null,
+            "nextBillingDate": null,
+            "customerSupportLevelCode": null,
+            "vendorSupportLevelCode": null,
+            "wbsNumber": "PS-00509.02",
+            "orderRevenueAmount": "302.470,00 ",
+            "orderCostAmount": "31.500,00 ",
+            "costRevenueDetails": [
+              {
+                "type": "Revenue",
+                "percentage": 22,
+                "licenseAmount": "302.470,00 ",
+                "maintenanceBaseAmount": "",
+                "fee": "",
+                "totalContractAmount": "",
+                "currencyCode": "DKK",
+                "invoicingDate": null,
+                "licenseAmountBigDecimal": 302470,
+                "maintenanceBaseAmountBigDecimal": null,
+                "invoicingCyclePeriodName": "One time",
+                "totalContractAmountBigDecimal": null,
+                "feeBigDecimal": null
+              },
+              {
+                "type": "Cost",
+                "percentage": 22,
+                "licenseAmount": "31.500,00 ",
+                "maintenanceBaseAmount": "",
+                "fee": "",
+                "totalContractAmount": "",
+                "currencyCode": "EUR",
+                "invoicingDate": null,
+                "licenseAmountBigDecimal": 31500,
+                "maintenanceBaseAmountBigDecimal": null,
+                "invoicingCyclePeriodName": "One time",
+                "totalContractAmountBigDecimal": null,
+                "feeBigDecimal": null
+              }
+            ],
+            "statuses": [
+              {
+                "type": "Running",
+                "name": "Order Status",
+                "description": null
+              }
+            ],
+            "regulations": [],
+            "orderRevenueAmountBigDecimal": 302470,
+            "orderCostAmountBigDecimal": 31500
+          },
+          {
+            "orderStartDate": "2018-04-01",
+            "orderEndDate": "2019-12-31",
+            "contractDuration": null,
+            "customerNoticePeriod": 3,
+            "customerPo": null,
+            "quantity": 10,
+            "customerSignatureDate": "2018-03-21",
+            "quoteNumber": null,
+            "quoteConfirmation": null,
+            "vendorSalesOrderNumber": null,
+            "vendorNoticePeriod": null,
+            "nextBillingDate": null,
+            "customerSupportLevelCode": null,
+            "vendorSupportLevelCode": null,
+            "wbsNumber": "PS-00509.02",
+            "orderRevenueAmount": "51.852,00 ",
+            "orderCostAmount": "5.400,00 ",
+            "costRevenueDetails": [
+              {
+                "type": "Revenue",
+                "percentage": 22,
+                "licenseAmount": "51.852,00 ",
+                "maintenanceBaseAmount": "",
+                "fee": "",
+                "totalContractAmount": "",
+                "currencyCode": "DKK",
+                "invoicingDate": null,
+                "licenseAmountBigDecimal": 51852,
+                "maintenanceBaseAmountBigDecimal": null,
+                "invoicingCyclePeriodName": "One time",
+                "totalContractAmountBigDecimal": null,
+                "feeBigDecimal": null
+              },
+              {
+                "type": "Cost",
+                "percentage": 22,
+                "licenseAmount": "5.400,00 ",
+                "maintenanceBaseAmount": "",
+                "fee": "",
+                "totalContractAmount": "",
+                "currencyCode": "EUR",
+                "invoicingDate": null,
+                "licenseAmountBigDecimal": 5400,
+                "maintenanceBaseAmountBigDecimal": null,
+                "invoicingCyclePeriodName": "One time",
+                "totalContractAmountBigDecimal": null,
+                "feeBigDecimal": null
+              }
+            ],
+            "statuses": [
+              {
+                "type": "Closed",
+                "name": "Order Status",
+                "description": null
+              }
+            ],
+            "regulations": [],
+            "orderRevenueAmountBigDecimal": 51852,
+            "orderCostAmountBigDecimal": 5400
+          },
+          {
+            "orderStartDate": "2020-07-01",
+            "orderEndDate": "9999-12-31",
+            "contractDuration": null,
+            "customerNoticePeriod": 3,
+            "customerPo": null,
+            "quantity": 1,
+            "customerSignatureDate": "2020-01-27",
+            "quoteNumber": null,
+            "quoteConfirmation": null,
+            "vendorSalesOrderNumber": null,
+            "vendorNoticePeriod": null,
+            "nextBillingDate": null,
+            "customerSupportLevelCode": null,
+            "vendorSupportLevelCode": null,
+            "wbsNumber": "PS-00509.02",
+            "orderRevenueAmount": "57.037,00 ",
+            "orderCostAmount": "5.940,00 ",
+            "costRevenueDetails": [
+              {
+                "type": "Revenue",
+                "percentage": 22,
+                "licenseAmount": "57.037,00 ",
+                "maintenanceBaseAmount": "",
+                "fee": "",
+                "totalContractAmount": "",
+                "currencyCode": "DKK",
+                "invoicingDate": null,
+                "licenseAmountBigDecimal": 57037,
+                "maintenanceBaseAmountBigDecimal": null,
+                "invoicingCyclePeriodName": "One time",
+                "totalContractAmountBigDecimal": null,
+                "feeBigDecimal": null
+              },
+              {
+                "type": "Cost",
+                "percentage": 22,
+                "licenseAmount": "5.940,00 ",
+                "maintenanceBaseAmount": "",
+                "fee": "",
+                "totalContractAmount": "",
+                "currencyCode": "EUR",
+                "invoicingDate": null,
+                "licenseAmountBigDecimal": 5940,
+                "maintenanceBaseAmountBigDecimal": null,
+                "invoicingCyclePeriodName": "One time",
+                "totalContractAmountBigDecimal": null,
+                "feeBigDecimal": null
+              }
+            ],
+            "statuses": [
+              {
+                "type": "Waiting",
+                "name": "Order Status",
+                "description": null
+              }
+            ],
+            "regulations": [],
+            "orderRevenueAmountBigDecimal": 57037,
+            "orderCostAmountBigDecimal": 5940
+          }
+        ],
+        "products": [
+          {
+            "name": "SAP S/4HANA, Developer access",
+            "productType": "SAP",
+            "vendorName": "SAP",
+            "vendorRpiNumber": 10230,
+            "materials": [
+              {
+                "description": "Material SAP S/4HANA",
+                "licenseKey": null
+              }
+            ]
+          },
+          {
+            "name": "SAP S/4HANA Enterprise Management for Professional use",
+            "productType": "SAP",
+            "vendorName": "SAP",
+            "vendorRpiNumber": 10230,
+            "materials": [
+              {
+                "description": "Material SAP S/4HANA",
+                "licenseKey": null
+              }
+            ]
+          },
+          {
+            "name": "SAP S/4HANA Enterprise Management for Functional use",
+            "productType": "SAP",
+            "vendorName": "SAP",
+            "vendorRpiNumber": 10230,
+            "materials": [
+              {
+                "description": "Material SAP S/4HANA",
+                "licenseKey": null
+              }
+            ]
+          },
+          {
+            "name": "SAP HANA, Runtime edition for Applications & SAP BW - New/Subsequent",
+            "productType": "SAP",
+            "vendorName": "SAP",
+            "vendorRpiNumber": 10230,
+            "materials": [
+              {
+                "description": "Material SAP S/4HANA",
+                "licenseKey": null
+              }
+            ]
+          }
+        ],
+        "totalRevenueBigDecimal": 328396,
+        "totalCostBigDecimal": 34200
+      },
+      {
+        "contractRpi": 40002166,
+        "salesResponsible": "Helle Bo Nielsen",
+        "contractTypeCode": "Maintenance",
+        "totalRevenue": "18.061,78 ",
+        "totalCost": "1.881,00 ",
+        "nextBillingDate": null,
+        "invoicingCycle": "Quarterly",
+        "productType": "SAP",
+        "contractStatus": "Active",
+        "orders": [
+          {
+            "orderStartDate": "2018-04-01",
+            "orderEndDate": "9999-12-31",
+            "contractDuration": null,
+            "customerNoticePeriod": 3,
+            "customerPo": null,
+            "quantity": 1,
+            "customerSignatureDate": "2018-03-21",
+            "quoteNumber": null,
+            "quoteConfirmation": null,
+            "vendorSalesOrderNumber": null,
+            "vendorNoticePeriod": null,
+            "nextBillingDate": null,
+            "customerSupportLevelCode": null,
+            "vendorSupportLevelCode": null,
+            "wbsNumber": "PS-00509.03",
+            "orderRevenueAmount": "1.425,93 ",
+            "orderCostAmount": "148,50 ",
+            "costRevenueDetails": [
+              {
+                "type": "Revenue",
+                "percentage": 22,
+                "licenseAmount": "",
+                "maintenanceBaseAmount": "25.926,00 ",
+                "fee": "",
+                "totalContractAmount": "",
+                "currencyCode": "DKK",
+                "invoicingDate": null,
+                "licenseAmountBigDecimal": null,
+                "maintenanceBaseAmountBigDecimal": 25926,
+                "invoicingCyclePeriodName": "Quarterly",
+                "totalContractAmountBigDecimal": null,
+                "feeBigDecimal": null
+              },
+              {
+                "type": "Cost",
+                "percentage": 22,
+                "licenseAmount": "",
+                "maintenanceBaseAmount": "2.700,00 ",
+                "fee": "",
+                "totalContractAmount": "",
+                "currencyCode": "EUR",
+                "invoicingDate": null,
+                "licenseAmountBigDecimal": null,
+                "maintenanceBaseAmountBigDecimal": 2700,
+                "invoicingCyclePeriodName": "Quarterly",
+                "totalContractAmountBigDecimal": null,
+                "feeBigDecimal": null
+              }
+            ],
+            "statuses": [
+              {
+                "type": "Running",
+                "name": "Order Status",
+                "description": null
+              }
+            ],
+            "regulations": [],
+            "orderRevenueAmountBigDecimal": 1425.93,
+            "orderCostAmountBigDecimal": 148.5
+          },
+          {
+            "orderStartDate": "2018-04-01",
+            "orderEndDate": "9999-12-31",
+            "contractDuration": null,
+            "customerNoticePeriod": 3,
+            "customerPo": null,
+            "quantity": 20,
+            "customerSignatureDate": "2018-03-21",
+            "quoteNumber": null,
+            "quoteConfirmation": null,
+            "vendorSalesOrderNumber": null,
+            "vendorNoticePeriod": null,
+            "nextBillingDate": null,
+            "customerSupportLevelCode": null,
+            "vendorSupportLevelCode": null,
+            "wbsNumber": "PS-00509.03",
+            "orderRevenueAmount": "16.635,85 ",
+            "orderCostAmount": "1.732,50 ",
+            "costRevenueDetails": [
+              {
+                "type": "Revenue",
+                "percentage": 22,
+                "licenseAmount": "",
+                "maintenanceBaseAmount": "302.470,00 ",
+                "fee": "",
+                "totalContractAmount": "",
+                "currencyCode": "DKK",
+                "invoicingDate": null,
+                "licenseAmountBigDecimal": null,
+                "maintenanceBaseAmountBigDecimal": 302470,
+                "invoicingCyclePeriodName": "Quarterly",
+                "totalContractAmountBigDecimal": null,
+                "feeBigDecimal": null
+              },
+              {
+                "type": "Cost",
+                "percentage": 22,
+                "licenseAmount": "",
+                "maintenanceBaseAmount": "31.500,00 ",
+                "fee": "",
+                "totalContractAmount": "",
+                "currencyCode": "EUR",
+                "invoicingDate": null,
+                "licenseAmountBigDecimal": null,
+                "maintenanceBaseAmountBigDecimal": 31500,
+                "invoicingCyclePeriodName": "Quarterly",
+                "totalContractAmountBigDecimal": null,
+                "feeBigDecimal": null
+              }
+            ],
+            "statuses": [
+              {
+                "type": "Running",
+                "name": "Order Status",
+                "description": null
+              }
+            ],
+            "regulations": [],
+            "orderRevenueAmountBigDecimal": 16635.85,
+            "orderCostAmountBigDecimal": 1732.5
+          },
+          {
+            "orderStartDate": "2018-04-01",
+            "orderEndDate": "2019-12-31",
+            "contractDuration": null,
+            "customerNoticePeriod": 3,
+            "customerPo": null,
+            "quantity": 10,
+            "customerSignatureDate": "2018-03-21",
+            "quoteNumber": null,
+            "quoteConfirmation": null,
+            "vendorSalesOrderNumber": null,
+            "vendorNoticePeriod": null,
+            "nextBillingDate": null,
+            "customerSupportLevelCode": null,
+            "vendorSupportLevelCode": null,
+            "wbsNumber": "PS-00509.03",
+            "orderRevenueAmount": "2.851,86 ",
+            "orderCostAmount": "297,00 ",
+            "costRevenueDetails": [
+              {
+                "type": "Revenue",
+                "percentage": 22,
+                "licenseAmount": "",
+                "maintenanceBaseAmount": "51.852,00 ",
+                "fee": "",
+                "totalContractAmount": "",
+                "currencyCode": "DKK",
+                "invoicingDate": null,
+                "licenseAmountBigDecimal": null,
+                "maintenanceBaseAmountBigDecimal": 51852,
+                "invoicingCyclePeriodName": "Quarterly",
+                "totalContractAmountBigDecimal": null,
+                "feeBigDecimal": null
+              },
+              {
+                "type": "Cost",
+                "percentage": 22,
+                "licenseAmount": "",
+                "maintenanceBaseAmount": "5.400,00 ",
+                "fee": "",
+                "totalContractAmount": "",
+                "currencyCode": "EUR",
+                "invoicingDate": null,
+                "licenseAmountBigDecimal": null,
+                "maintenanceBaseAmountBigDecimal": 5400,
+                "invoicingCyclePeriodName": "Quarterly",
+                "totalContractAmountBigDecimal": null,
+                "feeBigDecimal": null
+              }
+            ],
+            "statuses": [
+              {
+                "type": "Closed",
+                "name": "Order Status",
+                "description": null
+              }
+            ],
+            "regulations": [],
+            "orderRevenueAmountBigDecimal": 2851.86,
+            "orderCostAmountBigDecimal": 297
+          },
+          {
+            "orderStartDate": "2020-07-01",
+            "orderEndDate": "9999-12-31",
+            "contractDuration": null,
+            "customerNoticePeriod": 3,
+            "customerPo": null,
+            "quantity": 1,
+            "customerSignatureDate": "2020-01-27",
+            "quoteNumber": null,
+            "quoteConfirmation": null,
+            "vendorSalesOrderNumber": null,
+            "vendorNoticePeriod": null,
+            "nextBillingDate": null,
+            "customerSupportLevelCode": null,
+            "vendorSupportLevelCode": null,
+            "wbsNumber": "PS-00509.03",
+            "orderRevenueAmount": "3.137,04 ",
+            "orderCostAmount": "326,70 ",
+            "costRevenueDetails": [
+              {
+                "type": "Revenue",
+                "percentage": 22,
+                "licenseAmount": "",
+                "maintenanceBaseAmount": "57.037,00 ",
+                "fee": "",
+                "totalContractAmount": "",
+                "currencyCode": "DKK",
+                "invoicingDate": null,
+                "licenseAmountBigDecimal": null,
+                "maintenanceBaseAmountBigDecimal": 57037,
+                "invoicingCyclePeriodName": "Quarterly",
+                "totalContractAmountBigDecimal": null,
+                "feeBigDecimal": null
+              },
+              {
+                "type": "Cost",
+                "percentage": 22,
+                "licenseAmount": "",
+                "maintenanceBaseAmount": "5.940,00 ",
+                "fee": "",
+                "totalContractAmount": "",
+                "currencyCode": "EUR",
+                "invoicingDate": null,
+                "licenseAmountBigDecimal": null,
+                "maintenanceBaseAmountBigDecimal": 5940,
+                "invoicingCyclePeriodName": "Quarterly",
+                "totalContractAmountBigDecimal": null,
+                "feeBigDecimal": null
+              }
+            ],
+            "statuses": [
+              {
+                "type": "Waiting",
+                "name": "Order Status",
+                "description": null
+              }
+            ],
+            "regulations": [],
+            "orderRevenueAmountBigDecimal": 3137.035,
+            "orderCostAmountBigDecimal": 326.7
+          }
+        ],
+        "products": [
+          {
+            "name": "SAP S/4HANA, Developer access",
+            "productType": "SAP",
+            "vendorName": "SAP",
+            "vendorRpiNumber": 10230,
+            "materials": [
+              {
+                "description": "Material SAP S/4HANA",
+                "licenseKey": null
+              }
+            ]
+          },
+          {
+            "name": "SAP S/4HANA Enterprise Management for Professional use",
+            "productType": "SAP",
+            "vendorName": "SAP",
+            "vendorRpiNumber": 10230,
+            "materials": [
+              {
+                "description": "Material SAP S/4HANA",
+                "licenseKey": null
+              }
+            ]
+          },
+          {
+            "name": "SAP S/4HANA Enterprise Management for Functional use",
+            "productType": "SAP",
+            "vendorName": "SAP",
+            "vendorRpiNumber": 10230,
+            "materials": [
+              {
+                "description": "Material SAP S/4HANA",
+                "licenseKey": null
+              }
+            ]
+          },
+          {
+            "name": "SAP HANA, Runtime edition for Applications & SAP BW -\nNew/Subsequent",
+            "productType": "SAP",
+            "vendorName": "SAP",
+            "vendorRpiNumber": 10230,
+            "materials": [
+              {
+                "description": "Material SAP S/4HANA",
+                "licenseKey": null
+              }
+            ]
+          }
+        ],
+        "totalRevenueBigDecimal": 18061.78,
+        "totalCostBigDecimal": 1881
+      }
+    ],
+    "thirdPartyNumbers": [
+      {
+        "name": "SAP",
+        "number": "1703690"
+      }
+    ]
+  }
+]

@@ -175,7 +175,7 @@ const renderGrouper = (col: ColumnInstance<RowType>) => {
 const renderGroupedCell = (cell: Cell<RowType>, row: Row<RowType>) => {
   return (
     <>
-      {row.isExpanded ? "→" : "↓"} {cell.render("Cell")}{" "}
+      {row.isExpanded ? "↓" : "→"} {cell.render("Cell")}{" "}
       {`(${row.subRows.length})`}
     </>
   );
