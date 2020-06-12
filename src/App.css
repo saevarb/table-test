@@ -29,10 +29,6 @@ th {
   border-right: 1px solid black;
 }
 
-table tr:nth-child(2n + 1) {
-  background-color: #dddddd;
-}
-
 /* table th:nth-child(2n) { */
 /*   background-color: grey; */
 /* } */
@@ -70,3 +66,21 @@ tr.contract-active {
 tr.contract-inactive {
   background-color: lightyellow;
 }
+
+tr.not-grouped td[class*="customerContract"] {
+  text-align: right;
+}
+
+/* table tr:nth-child(2n + 1) { */
+/*   background-color: #dddddd; */
+/* } */
+table tr.grouped {
+  background-color: #dddddd;
+}
+table tr.not-grouped {
+  background-color: #eeeeee;
+}
+
+/* .not-grouped { */
+/*   color: green; */
+/* } */

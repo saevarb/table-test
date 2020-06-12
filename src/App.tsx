@@ -2,7 +2,7 @@ import React, { useMemo, useCallback, useEffect } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import payload from "./payload.json";
-import { ContractOverview, Contract } from "./types";
+import { ContractOverview, Contract, Order } from "./types";
 import {
   useTable,
   Column,
@@ -75,91 +75,83 @@ const currencyRenderer = ({ value }: { value: number }) => {
 // "companyCodeNumber": "1200",
 const overviewColDefs: Column<RowType>[] = [
   {
-    Header: "Customer",
-    id: "customer_header",
-    columns: [
-      {
-        Header: "Name",
-        accessor: "customerName",
-        aggregate: displaySingleAggregator,
-        Aggregated: renderSingleAgg
-      },
-      {
-        Header: "RPI",
-        accessor: "customerRpi",
-        aggregate: displaySingleAggregator,
-        Aggregated: renderSingleAgg
+    Header: "Customer/contract",
+    id: "customerContract",
+    // accessor: row => `${row.customerName}-${row.contractRpi}`,
+    accessor: row => row.customerName,
+    // aggregateValue: (val: any) => console.log(val),
+    Cell: (table: any) => {
+      // console.log("cell:", table.value, table.cell);
+      // const [companyName, cRpi] = table.cell.value.split("-");
+      console.log(table.row.values);
+      if (table.cell.isAggregated) {
+        // return "aggregated";
+        return table.value;
       }
-    ]
+      if (table.cell.isPlaceholder) {
+        return table.row.values.contractRpi;
+      }
+      if (table.cell.isGrouped) {
+        return table.value;
+      }
+      return table.value;
+    }
   },
   {
-    Header: "Company",
-    id: "company_header",
-    columns: [
-      {
-        Header: "Code name",
-        accessor: "companyCodeName",
-        aggregate: displaySingleAggregator,
-        Aggregated: renderSingleAgg
-      },
-      {
-        Header: "Code number",
-        accessor: "companyCodeNumber",
-        aggregate: displaySingleAggregator,
-        Aggregated: renderSingleAgg
-      }
-    ]
+    Header: "Contract RPI",
+    accessor: "contractRpi"
   },
   {
-    Header: "Contract",
-    columns: [
-      {
-        Header: "Contract RPI",
-        accessor: "contractRpi",
-        aggregate: displaySingleAggregator,
-        Aggregated: renderSingleAgg
-      },
-      {
-        Header: "Sales rep",
-        accessor: "salesResponsible",
-        aggregate: displaySingleAggregator,
-        Aggregated: renderSingleAgg
-      },
-      {
-        Header: "Revenue",
-        disableGroupBy: true,
-        aggregate: "sum",
-        Aggregated: currencyRenderer,
-        Cell: currencyRenderer,
-        accessor: "totalRevenueBigDecimal"
-      },
-      {
-        Header: "Cost",
-        disableGroupBy: true,
-        aggregate: "sum",
-        Aggregated: currencyRenderer,
-        Cell: currencyRenderer,
-        accessor: "totalCostBigDecimal"
-      },
-      {
-        Header: "Type",
-        accessor: "contractTypeCode",
-        aggregate: displaySingleAggregator,
-        Aggregated: renderSingleAgg
-      },
-      {
-        Header: "Product Type",
-        accessor: "productType",
-        aggregate: displaySingleAggregator,
-        Aggregated: renderSingleAgg
-      },
-      {
-        Header: "Invoice cycle",
-        accessor: "invoicingCycle",
-        aggregate: displaySingleAggregator,
-        Aggregated: renderSingleAgg
-      }
-    ]
+    Header: "Code name",
+    accessor: "companyCodeName",
+    aggregate: displaySingleAggregator,
+    Aggregated: renderSingleAgg
+  },
+  {
+    Header: "Code number",
+    accessor: "companyCodeNumber",
+    aggregate: displaySingleAggregator,
+    Aggregated: renderSingleAgg
+  },
+  {
+    Header: "Sales rep",
+    accessor: "salesResponsible",
+    aggregate: displaySingleAggregator,
+    Aggregated: renderSingleAgg
+  },
+  {
+    Header: "Revenue",
+    disableGroupBy: true,
+    aggregate: "sum",
+    Aggregated: currencyRenderer,
+    Cell: currencyRenderer,
+    accessor: "totalRevenueBigDecimal"
+  },
+  {
+    Header: "Cost",
+    disableGroupBy: true,
+    aggregate: "sum",
+    Aggregated: currencyRenderer,
+    Cell: currencyRenderer,
+    accessor: "totalCostBigDecimal"
+  },
+  {
+    Header: "Type",
+    accessor: "contractTypeCode",
+    aggregate: displaySingleAggregator,
+    Aggregated: renderSingleAgg
+  },
+  {
+    Header: "Product Type",
+    accessor: "productType",
+    aggregate: displaySingleAggregator,
+    Aggregated: renderSingleAgg
+  },
+  {
+    Header: "Invoice cycle",
+    accessor: "invoicingCycle",
+    aggregate: displaySingleAggregator,
+    Aggregated: renderSingleAgg
   }
 ];
 
@@ -189,7 +181,9 @@ const renderCell = (cell: Cell<RowType>, row: Row<RowType>) => {
   const foo = cell.column.isGrouped ? "boundary" : "";
   return (
     <td className={`cell-${cell.column.id} ${foo}`} {...cell.getCellProps()}>
-      {cell.isGrouped
+      {cell.column.id === "customerContract"
+        ? cell.render("Cell")
+        : cell.isGrouped
         ? renderGroupedCell(cell, row)
         : cell.isAggregated
         ? renderAggCell(cell, row)
@@ -229,8 +223,8 @@ const OverviewTable = () => {
       columns: cols,
       data: data,
       initialState: {
-        groupBy: ["customerRpi"],
-        hiddenColumns: [],
+        groupBy: ["customerContract"],
+        hiddenColumns: ["contractRpi"],
         columnOrder: []
       }
     },
@@ -243,12 +237,12 @@ const OverviewTable = () => {
     useRowSelect
   );
 
-  useEffect(() => {
-    console.log("groupby changed");
-    for (const col of allColumns) {
-      console.log(col);
-    }
-  }, [state.groupBy]);
+  // useEffect(() => {
+  //   console.log("groupby changed");
+  //   for (const col of allColumns) {
+  //     console.log(col);
+  //   }
+  // }, [state.groupBy]);
 
   // const handleDragEnter = (event: Han)
   const handleDragOver = (data: DataTransfer) => {
@@ -301,10 +295,25 @@ const OverviewTable = () => {
         <tbody {...getTableBodyProps()}>
           {rows.map(row => {
             prepareRow(row);
+            // console.log(row);
             return (
-              <tr {...row.getRowProps()} {...row.getToggleRowExpandedProps()}>
-                {row.cells.map(cell => renderCell(cell, row))}
-              </tr>
+              <>
+                <tr
+                  className={row.isGrouped ? "grouped" : "not-grouped"}
+                  {...row.getRowProps()}
+                  {...row.getToggleRowExpandedProps()}
+                >
+                  {row.cells.map(cell => renderCell(cell, row))}
+                </tr>
+                {row.isExpanded && row.subRows.length === 0 ? (
+                  <tr>
+                    <td className="subtable" colSpan={visibleColumns.length}>
+                      <h3>Orders</h3>
+                      <OrderTable orders={row.original.orders} />
+                    </td>
+                  </tr>
+                ) : null}
+              </>
             );
           })}
         </tbody>
@@ -321,5 +330,69 @@ function App() {
     </div>
   );
 }
+
+interface ContractTableProps {
+  orders: Order[];
+}
+
+const contractColDefs: Column<Order>[] = [
+  { Header: "Signature", accessor: "customerSignatureDate" },
+  { Header: "Start", accessor: "orderStartDate" },
+  { Header: "End", accessor: "orderEndDate" },
+  { Header: "WBS", accessor: "wbsNumber" }
+
+  // { Header: "RPI", accessor: "contractRpi" },
+  // { Header: "Sales rep.", accessor: "salesResponsible" },
+  // { Header: "Type", accessor: "contractTypeCode" },
+  // { Header: "Invoice cycle", accessor: "invoicingCycle" },
+  // { Header: "Revenue", accessor: "totalRevenue" },
+  // { Header: "Cost", accessor: "totalCost" },
+  // { Header: "Product Type", accessor: "productType" }
+];
+
+const OrderTable = (props: ContractTableProps) => {
+  console.log(props.orders);
+  const data = useMemo(() => props.orders, [props]);
+  const cols = useMemo(() => contractColDefs, []);
+
+  const {
+    headerGroups,
+    prepareRow,
+    getTableProps,
+    getTableBodyProps,
+    rows
+  } = useTable<Order>({
+    columns: cols,
+    data: data
+  });
+
+  return (
+    <table {...getTableProps()}>
+      <thead>
+        {headerGroups.map(hg => (
+          <tr {...hg.getHeaderGroupProps()}>
+            {hg.headers.map(col => (
+              <th {...col.getHeaderProps()}>
+                <div>{col.render("Header")}</div>
+              </th>
+            ))}
+          </tr>
+        ))}
+      </thead>
+      <tbody {...getTableBodyProps()}>
+        {rows.map(row => {
+          prepareRow(row);
+          return (
+            <tr {...row.getRowProps()}>
+              {row.cells.map(cell => (
+                <td {...cell.getCellProps()}>{cell.render("Cell")}</td>
+              ))}
+            </tr>
+          );
+        })}
+      </tbody>
+    </table>
+  );
+};
 
 export default App;
